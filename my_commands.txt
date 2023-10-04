@@ -1,0 +1,29 @@
+    1  pwd 
+    2  pwd github repo
+    3  sudo apt remove ngnix
+    4  touch my_text_file.txt
+    5  ls-lta
+    6  git clone ~https://github.com/shahidsalim07/RTR105~
+    7  git clone https://github.com/shahidsalim07/RTR105
+    8  sudo apt install git
+    9  [200~git clone https://github.com/shahidsalim07/RTR105~
+   10  git clone https://github.com/shahidsalim07/RTR105
+   11  cd RTR105
+   12  men ls
+   13  sudo apt install man
+   14  history
+   15  history>my_commands.txt
+   16  git clone  https://github.com/shahidsalim07/RTR105
+   17  cd RTR105
+   18  touch commands.txt
+   19  nano commands.txt
+   20  ls-lt
+   21  ls-l
+   22  ls -l
+   23  ls- lt
+   24  lsd
+   25  sudo snap instal lsd
+   26  cmatrix
+   27  fortune
+   28  history
+   29  history > my_commands.txt

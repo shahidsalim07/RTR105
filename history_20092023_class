@@ -1,0 +1,5 @@
+   31  git add my_commands.txt
+   32  git remote add origin https://github.com/shahidsalim07/RTR105_2023-FOREIGN
+   33  git config --global init.defaultBranch  my_commands.txt
+   34  history
+   35  history > history_20092023_class 05

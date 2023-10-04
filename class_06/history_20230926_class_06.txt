@@ -1,0 +1,85 @@
+    1  pwd 
+    2  pwd github repo
+    3  sudo apt remove ngnix
+    4  touch my_text_file.txt
+    5  ls-lta
+    6  git clone ~https://github.com/shahidsalim07/RTR105~
+    7  git clone https://github.com/shahidsalim07/RTR105
+    8  sudo apt install git
+    9  [200~git clone https://github.com/shahidsalim07/RTR105~
+   10  git clone https://github.com/shahidsalim07/RTR105
+   11  cd RTR105
+   12  men ls
+   13  sudo apt install man
+   14  history
+   15  history>my_commands.txt
+   16  git clone  https://github.com/shahidsalim07/RTR105
+   17  cd RTR105
+   18  touch commands.txt
+   19  nano commands.txt
+   20  ls-lt
+   21  pwd
+   22  ls-lt
+   23  ls -lt
+   24  git clone https://github.com/shahidsalim07/RTR105_2023-FOREIGN
+   25  ls -lt
+   26  ~/https://github.com/shahidsalim07/RTR105_2023-FOREIGN LS -LT
+   27  https://github.com/shahidsalim07/RTR105 ls -lt
+   28  mkdir my_directory
+   29  fwlnujrguygr
+   30  jebfb
+   31  mkdir my_directory https://github.com/shahidsalim07/RTR105
+   32  git clone https://github.com/shahidsalim07/RTR105
+   33  https://github.com/shahidsalim07/RTR105 nanofirst.c
+   34  nanofirst.c
+   35  sudo instal nanofirst.c
+   36  #include <stdio.h>
+   37  int main() {
+   38  gcc first.c
+   39  sudo apt install gcc
+   40  gcc first.c
+   41  cd /path/to/directory/containing/first.c
+   42  gcc /path/to/first.c
+   43  ls -lt
+   44  git clone https://github.com/shahidsalim07/RTR105.git
+   45  cd RTR105
+   46  git add .
+   47  git commit -m "Add class 05 code"
+   48  cmatrix
+   49  ls
+   50  ls -l
+   51  cd /path/to/directory
+   52  pwd
+   53  mkdir directory_name
+   54  someelse name is 
+   55  cmatrix
+   56  pwd
+   57  touch filename cats
+   58  nano cat
+   59  vim cat
+   60  whaomi
+   61  whoami
+   62  echo "_ _ _ _ _"
+   63  is
+   64  sudo apt install ironseed
+   65  is
+   66  echo "_ _ _ _ _"
+   67  echo "12345" > a.txt
+   68  ls
+   69  echo "_ _ _ _ _"
+   70  pwd
+   71  cd rtr009
+   72  ls-lt
+   73  ls -lt
+   74  nano first.c
+   75  ls -lta
+   76  cd class_06
+   77  mkdir class_06
+   78  ls -lt
+   79  cd class_06
+   80  cat a.out
+   81  gcc first.c
+   82  history > history_20230926_class_06.txt
+   83  git clone https://github.com/shahidsalim07/rtr009
+   84  ls -lt
+   85  history > history_20230926_class_06.txt
