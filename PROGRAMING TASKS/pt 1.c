@@ -2,7 +2,8 @@
 int main()
  {   
   double num1, num2, product;
-  //  user to enter their numbers    printf("Enter the first number: ");
+  //  user to enter their numbers    
+  printf("Enter the first number: ");
   scanf("%lf", &num1);
   printf("Enter the second number: ");
   scanf("%lf", &num2);
