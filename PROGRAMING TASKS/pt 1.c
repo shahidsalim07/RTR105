@@ -1,14 +1,15 @@
 #include <stdio.h>
-int main()
- {   
-  long long num1, num2, product;
-  //  user to enter their numbers    
-  printf("Enter the first number: ");
-  scanf("%lld", &num1);
-  printf("Enter the second number: ");
-  scanf("%lld", &num2);
 
-  product = num1 * num2; 
-  printf("The product of %.lld and %.2lld is: %.2lld\n", num1, num2, product);
-  return 0;
-  }
+int main() {
+    unsigned long val1, val2, rezult;
+    printf("First number: ");
+    scanf("%lu", &val1);
+    printf("Second number: ");
+    scanf("%lu", &val2);
+    rezult = val1 * val2;
+    printf("Result: %lu\n", rezult);
+    return 0;
+}
+
+
+
