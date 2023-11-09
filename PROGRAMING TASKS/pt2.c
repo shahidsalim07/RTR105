@@ -1,20 +1,24 @@
-include<stdio.h>
-#include<stdint.h>  
+#include<stdio.h>
+#include<stdint.h>
 #include<math.h>
-int main()       
+
+int main()
 {
-char a;
-printf("Enter a natural number: ");      
-scanf("%hhd", &a);
-printf("Number: 0x%X\n", a);
-printf("%hhd", ((a & 0x80) >> 7));
-printf("%hhd", ((a & 0x40) >> 6));
-printf("%hhd", ((a & 0x20) >> 5));
-printf("%hhd", ((a & 0x10) >> 4));
-printf("%hhd", ((a & 0x08) >> 3));
-printf("%hhd", ((a & 0x04) >> 2));
-printf("%hhd", ((a & 0x02) >> 1));
-printf("%hhd", ((a & 0x01) >> 0));
-printf("\n");
-  return 0;      
-}    
+    uint8_t a;  // Use uint8_t for an 8-bit unsigned integer
+    printf("Enter a natural number: ");
+    scanf("%hhu", &a);  // Use %hhu for unsigned char
+    printf("Number: 0x%X\n", a);
+
+    // Print binary representation
+    printf("%d", (a & 0x80) ? 1 : 0);
+    printf("%d", (a & 0x40) ? 1 : 0);
+    printf("%d", (a & 0x20) ? 1 : 0);
+    printf("%d", (a & 0x10) ? 1 : 0);
+    printf("%d", (a & 0x08) ? 1 : 0);
+    printf("%d", (a & 0x04) ? 1 : 0);
+    printf("%d", (a & 0x02) ? 1 : 0);
+    printf("%d", (a & 0x01) ? 1 : 0);
+
+    printf("\n");
+    return 0;
+}
