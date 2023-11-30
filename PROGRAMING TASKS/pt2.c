@@ -4,12 +4,12 @@
 
 int main()
 {
-    uint8_t a;  // Use uint8_t for an 8-bit unsigned integer
+    uint8_t a;  
     printf("Enter a natural number: ");
-    scanf("%hhu", &a);  // Use %hhu for unsigned char
+    scanf("%hhu", &a);  
     printf("Number: 0x%X\n", a);
 
-    // Print binary representation
+
     printf("%d", (a & 0x80) ? 1 : 0);
     printf("%d", (a & 0x40) ? 1 : 0);
     printf("%d", (a & 0x20) ? 1 : 0);
