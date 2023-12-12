@@ -1,24 +1,24 @@
-#include<stdio.h>
-#include<stdint.h>
-#include<math.h>
+#include <stdio.h>
 
-int main()
-{
-    uint8_t a;  
-    printf("Enter a natural number: ");
-    scanf("%hhu", &a);  
-    printf("Number: 0x%X\n", a);
+int main() {
 
+   int num, bin=0 , rem =0,place=1;
 
-    printf("%d", (a & 0x80) ? 1 : 0);
-    printf("%d", (a & 0x40) ? 1 : 0);
-    printf("%d", (a & 0x20) ? 1 : 0);
-    printf("%d", (a & 0x10) ? 1 : 0);
-    printf("%d", (a & 0x08) ? 1 : 0);
-    printf("%d", (a & 0x04) ? 1 : 0);
-    printf("%d", (a & 0x02) ? 1 : 0);
-    printf("%d", (a & 0x01) ? 1 : 0);
+   printf("enter a decimal number\n");
+   scanf("%d", &num);
 
-    printf("\n");
+   printf("the binary no of the given %d is ", num);
+   while (num)
+
+    {
+        rem = num % 2;
+        num = num / 2;
+        bin = bin + (rem *place);
+        place = place * 10 ;
+
+    }
+    printf ("%d\n", bin);
+
     return 0;
+
 }
