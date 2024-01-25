@@ -1,26 +1,59 @@
 #include <stdio.h>
 
-int main() {
-  char letter[3];
-  char order;
+int main() 
+{
+    char letter1, letter2, letter3;
 
-  printf("Enter the first letter: ");
-  scanf(" %c", &letter[0]);
+    // User input for three letters
+    printf("Enter the first letter: ");
+    scanf(" %c", &letter1);
 
-  printf("Enter the second letter: ");
-  scanf(" %c", &letter[1]);
+    printf("Enter the second letter: ");
+    scanf(" %c", &letter2);
 
-  printf("Enter the third letter: ");
-  scanf(" %c", &letter[2]);
+    printf("Enter the third letter: ");
+    scanf(" %c", &letter3);
 
-  printf("Enter A for ascending order or D for descending order: ");
-  scanf(" %c", &order);
+    char order;
 
-  if (order == 'A') {
-    printf("Sorted letters: %c %c %c\n", letter[0], letter[1], letter[2]);
-  } else {
-    printf("Sorted letters: %c %c %c\n", letter[2], letter[1], letter[0]);
-  }
+    // User input for order preference
+    printf("Enter 'a' for alphabetical order or 'd' for decsending order: ");
+    scanf(" %c", &order);
 
-  return 0;
+    // Sorting logic
+    if (letter1 > letter2) 
+    {
+        // Swap letter1 and letter2 using a temporary variable
+        char temp = letter1;
+        letter1 = letter2;
+        letter2 = temp;
+    }
+
+    if (letter2 > letter3) 
+    {
+        // Swap letter2 and letter3 using a temporary variable
+        char temp = letter2;
+        letter2 = letter3;
+        letter3 = temp;
+    }
+
+    if (letter1 > letter2) 
+    {
+        // Double-check and swap letter1 and letter2 if needed
+        char temp = letter1;
+        letter1 = letter2;
+        letter2 = temp;
+    }
+
+    // Output based on user's order preference
+    if (order == 'a') 
+    { 
+        printf("Alphabetical Order for these Letters: \n%c, %c, %c\n", letter1, letter2, letter3);
+    } 
+    else if (order == 'd') 
+    {
+        printf("descending order for these Letters: \n%c, %c, %c\n", letter3, letter2, letter1);
+    }
+
+    return 0;
 }
