@@ -4,47 +4,52 @@ int main()
 {
     char letter1, letter2, letter3;
 
+    // Step 1: Input for letter1
     printf("Enter the first letter: ");
     scanf(" %c", &letter1);
+    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter1, sizeof(letter1));
 
+    // Step 2: Input for letter2
     printf("Enter the second letter: ");
     scanf(" %c", &letter2);
+    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter2, sizeof(letter2));
 
+    // Step 3: Input for letter3
     printf("Enter the third letter: ");
     scanf(" %c", &letter3);
+    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter3, sizeof(letter3));
 
     char order;
 
+    // Step 4: Input for order
     printf("Enter 'a' for alphabetical order or 'd' for descending order: ");
     scanf(" %c", &order);
+    printf("Memory Allocation: %p, Size: %lu\n", (void*)&order, sizeof(order));
 
-    printf("\nMemory Addresses and Sizes:\n");
-    printf("letter1 - Address: %p, Size: %lu\n", (void*)&letter1, sizeof(letter1));
-    printf("letter2 - Address: %p, Size: %lu\n", (void*)&letter2, sizeof(letter2));
-    printf("letter3 - Address: %p, Size: %lu\n", (void*)&letter3, sizeof(letter3));
-    printf("order   - Address: %p, Size: %lu\n", (void*)&order, sizeof(order));
-
+    // Sorting letters
+    char temp;
     if (letter1 > letter2) 
     {
-        char temp = letter1;
+        temp = letter1;
         letter1 = letter2;
         letter2 = temp;
     }
 
     if (letter2 > letter3) 
     {
-        char temp = letter2;
+        temp = letter2;
         letter2 = letter3;
         letter3 = temp;
     }
 
     if (letter1 > letter2) 
     {
-        char temp = letter1;
+        temp = letter1;
         letter1 = letter2;
         letter2 = temp;
     }
 
+    // Output in alphabetical or descending order
     if (order == 'a') 
     { 
         printf("\nAlphabetical Order for these Letters: \n%c, %c, %c\n", letter1, letter2, letter3);
