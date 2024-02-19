@@ -4,27 +4,27 @@ int main()
 {
     char letter1, letter2, letter3;
 
-    // Step 1: Input for letter1
+    // Input for letter1
     printf("Enter the first letter: ");
     scanf(" %c", &letter1);
-    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter1, sizeof(letter1));
+    printf("Value: %c, Address: %p, Size: %lu\n", letter1, (void*)&letter1, sizeof(letter1));
 
-    // Step 2: Input for letter2
+    // Input for letter2
     printf("Enter the second letter: ");
     scanf(" %c", &letter2);
-    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter2, sizeof(letter2));
+    printf("Value: %c, Address: %p, Size: %lu\n", letter2, (void*)&letter2, sizeof(letter2));
 
-    // Step 3: Input for letter3
+    // Input for letter3
     printf("Enter the third letter: ");
     scanf(" %c", &letter3);
-    printf("Memory Allocation: %p, Size: %lu\n", (void*)&letter3, sizeof(letter3));
+    printf("Value: %c, Address: %p, Size: %lu\n", letter3, (void*)&letter3, sizeof(letter3));
 
     char order;
 
-    // Step 4: Input for order
+    // Input for order
     printf("Enter 'a' for alphabetical order or 'd' for descending order: ");
     scanf(" %c", &order);
-    printf("Memory Allocation: %p, Size: %lu\n", (void*)&order, sizeof(order));
+    printf("Value: %c, Address: %p, Size: %lu\n", order, (void*)&order, sizeof(order));
 
     // Sorting letters
     char temp;
@@ -33,6 +33,7 @@ int main()
         temp = letter1;
         letter1 = letter2;
         letter2 = temp;
+        printf("Sorting Step 1: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
     }
 
     if (letter2 > letter3) 
@@ -40,6 +41,7 @@ int main()
         temp = letter2;
         letter2 = letter3;
         letter3 = temp;
+        printf("Sorting Step 2: temp = %c, letter2 = %c, letter3 = %c\n", temp, letter2, letter3);
     }
 
     if (letter1 > letter2) 
@@ -47,6 +49,7 @@ int main()
         temp = letter1;
         letter1 = letter2;
         letter2 = temp;
+        printf("Sorting Step 3: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
     }
 
     // Output in alphabetical or descending order
