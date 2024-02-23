@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+int main() 
+{
+    char letter1, letter2, letter3;
+
+    printf("Enter the first letter: ");
+    scanf(" %c", &letter1);
+    printf("Value: %c, Address: %p, Size: %lu\n", letter1, (void*)&letter1, sizeof(letter1));
+
+    printf("Enter the second letter: ");
+    scanf(" %c", &letter2);
+    printf("Value: %c, Address: %p, Size: %lu\n", letter2, (void*)&letter2, sizeof(letter2));
+
+    printf("Enter the third letter: ");
+    scanf(" %c", &letter3);
+    printf("Value: %c, Address: %p, Size: %lu\n", letter3, (void*)&letter3, sizeof(letter3));
+
+    char order;
+
+    printf("Enter 'a' for alphabetical order or 'd' for descending order: ");
+    scanf(" %c", &order);
+    printf("Value: %c, Address: %p, Size: %lu\n", order, (void*)&order, sizeof(order));
+
+    char temp;
+
+    printf("\nInitial Values:\n");
+    printf("letter1 = %c, letter2 = %c, letter3 = %c\n", letter1, letter2, letter3);
+
+    if (letter1 > letter2) 
+    {
+        temp = letter1;
+        printf("\nSorting Step 1a: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+        letter1 = letter2;
+        printf("Sorting Step 1b: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+        letter2 = temp;
+        printf("Sorting Step 1c: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+    }
+
+    if (letter2 > letter3) 
+    {
+        temp = letter2;
+        printf("\nSorting Step 2a: temp = %c, letter2 = %c, letter3 = %c\n", temp, letter2, letter3);
+        letter2 = letter3;
+        printf("Sorting Step 2b: temp = %c, letter2 = %c, letter3 = %c\n", temp, letter2, letter3);
+        letter3 = temp;
+        printf("Sorting Step 2c: temp = %c, letter2 = %c, letter3 = %c\n", temp, letter2, letter3);
+    }
+
+    if (letter1 > letter2) 
+    {
+        temp = letter1;
+        printf("\nSorting Step 3a: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+        letter1 = letter2;
+        printf("Sorting Step 3b: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+        letter2 = temp;
+        printf("Sorting Step 3c: temp = %c, letter1 = %c, letter2 = %c\n", temp, letter1, letter2);
+    }
+
+    printf("\nSorted Values:\n");
+    printf("letter1 = %c, letter2 = %c, letter3 = %c\n", letter1, letter2, letter3);
+
+    if (order == 'a') 
+    { 
+        printf("\nAlphabetical Order for these Letters: \n%c, %c, %c\n", letter1, letter2, letter3);
+    } 
+    else if (order == 'd') 
+    {
+        printf("\nDescending Order for these Letters: \n%c, %c, %c\n", letter3, letter2, letter1);
+    }
+
+    return 0;
+}
