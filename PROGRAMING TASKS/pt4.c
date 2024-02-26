@@ -15,7 +15,7 @@ int main() {
       break;
     }
 
-    while (getchar() != '\n'); // Clear input buffer
+    while (getchar() != '\n');
 
     printf("Enter a datatype (1 for char, 2 for int, or 3 for long long): ");
     scanf(" %c", &datatype);
