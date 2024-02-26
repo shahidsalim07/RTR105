@@ -1,49 +1,40 @@
-#include <stdio.h>
+#include<stdio.h>
+
+void calculateAndPrintFactorial(char datatype, long long num);
 
 int main() {
-    double factorial = 1.0;
-    double result = 1.0;
-    double number;
-    char dataType;
+  char datatype;
+  long long num;
 
-    printf("Enter a decimal number: ");
-    scanf("%lf", &number);
+  while (1) {
+    printf("Enter a decimal number (or enter 0 to exit): ");
+    scanf("%lld", &num);
 
-    printf("Choose data type - char (c), int (i), or long long (l): ");
-    scanf(" %c", &dataType);
-
-    switch(dataType) {
-        case 'c':
-            while (number > 0 && result <= factorial) {
-                factorial *= number;
-                result = factorial;
-                number--;
-            }
-            break;
-        case 'i':
-            while (number > 0 && result <= factorial) {
-                factorial *= number;
-                result = factorial;
-                number--;
-            }
-            break;
-        case 'l':
-            while (number > 0 && result <= factorial) {
-                factorial *= number;
-                result = factorial;
-                number--;
-            }
-            break;
-        default:
-            printf("Invalid data type selected.\n");
-            return 1;
+    if (num == 0) {
+      printf("Exiting the program.\n");
+      break;
     }
 
-    if (result > factorial) {
-        printf("Factorial value calculation with the selected data type is not possible.\n");
-    } else {
-        printf("Factorial of %.0lf is: %.0lf\n", number + 1, factorial);
-    }
+    while (getchar() != '\n'); // Clear input buffer
 
-    return 0;
+    printf("Enter a datatype (1 for char, 2 for int, or 3 for long long): ");
+    scanf(" %c", &datatype);
+
+    calculateAndPrintFactorial(datatype, num);
+  }
+
+  return 0;
+}
+
+void calculateAndPrintFactorial(char datatype, long long num) {
+  long long result = 1;
+  long long factorial = 1;
+
+  for (long long i = 1; i <= num; i++) {
+    result *= i;
+    factorial *= i;
+  }
+
+  printf("Factorial of the given number using %s is: %lld.\n",
+         (datatype == '1') ? "char" : ((datatype == '2') ? "int" : "long long"), result);
 }
