@@ -1,40 +1,43 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void calculateAndPrintFactorial(char datatype, long long num);
+void calculateAndPrintFactorial(int datatype, int num);
 
 int main() {
-  char datatype;
-  long long num;
+    int datatype;
+    int num;
 
-  while (1) {
-    printf("Enter a decimal number (or enter 0 to exit): ");
-    scanf("%lld", &num);
+    while (1) {
+        printf("Enter a decimal number (or enter -1 to exit): ");
+        scanf("%d", &num);
 
-    if (num == 0) {
-      printf("Exiting the program.\n");
-      break;
+        if (num == -1) {
+            printf("Exiting the program.\n");
+            break;
+        }
+
+        while (getchar() != '\n');
+
+        printf("Enter a datatype (1 for char, 2 for int, or 3 for long long): ");
+        scanf("%d", &datatype);
+
+        calculateAndPrintFactorial(datatype, num);
     }
 
-    while (getchar() != '\n');
-
-    printf("Enter a datatype (1 for char, 2 for int, or 3 for long long): ");
-    scanf(" %c", &datatype);
-
-    calculateAndPrintFactorial(datatype, num);
-  }
-
-  return 0;
+    return 0;
 }
 
-void calculateAndPrintFactorial(char datatype, long long num) {
-  long long result = 1;
-  long long factorial = 1;
+void calculateAndPrintFactorial(int datatype, int num) {
+    if (datatype == 1) {
+        // Handle char datatype
+        printf("Factorial is not defined for characters.\n");
+    } else {
+        // Handle long long datatype
+        long long result = 1;
 
-  for (long long i = 1; i <= num; i++) {
-    result *= i;
-    factorial *= i;
-  }
+        for (int i = 1; i <= num; i++) {
+            result *= i;
+        }
 
-  printf("Factorial of the given number using %s is: %lld.\n",
-         (datatype == '1') ? "char" : ((datatype == '2') ? "int" : "long long"), result);
+        printf("Factorial of the given number using long long is: %lld.\n", result);
+    }
 }
