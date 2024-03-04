@@ -18,7 +18,7 @@ int main() {
         while (getchar() != '\n');
 
         printf("Enter a datatype (1 for char, 2 for int, or 3 for long long): ");
-        scanf(" %c", &datatype); // note the space before %c to consume the newline character
+        scanf(" %c", &datatype);
 
         calculateAndPrintFactorial(datatype, num);
     }
@@ -28,7 +28,6 @@ int main() {
 
 void calculateAndPrintFactorial(char datatype, char num) {
     if (datatype == '1') {
-        // Handle char datatype
         char result = 1;
 
         for (char i = 1; i <= num; i++) {
@@ -38,7 +37,6 @@ void calculateAndPrintFactorial(char datatype, char num) {
 
         printf("Factorial of the given number using char is: %d.\n", result);
     } else {
-        // Handle other datatypes
         printf("Error: Factorial calculation is not implemented for the specified datatype.\n");
     }
 }
