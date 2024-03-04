@@ -33,6 +33,7 @@ void calculateAndPrintFactorial(char datatype, char num) {
 
         for (char i = 1; i <= num; i++) {
             result *= i;
+            printf("result after multiplying by %d is: %d.\n", i, result);
         }
 
         printf("Factorial of the given number using char is: %d.\n", result);
