@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void calculateAndPrintFactorial(char datatype, char num);
 
 int main() {
