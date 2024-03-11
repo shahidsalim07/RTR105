@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 void calculateAndPrintFactorial(char datatype, char num);
 
 int main() {
@@ -29,9 +27,18 @@ int main() {
 void calculateAndPrintFactorial(char datatype, char num) {
     if (datatype == '1') {
         char result = 1;
+        char previousResult = 1;
 
         for (char i = 1; i <= num; i++) {
-            result *= i;
+            result = previousResult * i;
+
+            // Check for overflow
+            if (result < previousResult) {
+                printf("Error: Factorial calculation overflowed for the given datatype.\n");
+                return;
+            }
+
+            previousResult = result;
             printf("result after multiplying by %d is: %d.\n", i, result);
         }
 
