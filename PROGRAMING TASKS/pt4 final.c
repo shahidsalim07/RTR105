@@ -5,19 +5,19 @@ void calculateFactorial(int num, char type) {
         int result = 1;
         for (int i = 1; i <= num; i++) {
             if (result * i < result) {
-                printf("Overflow occurred at %d!\n", i);
+                printf("Overflow occurred at %d!\n", i-1);
                 return;
             }
             result *= i;
             printf("Factorial at %d: %d\n", i, result);
         }
     } else if (type == 'c') {
-        char result = 1;
-        for (int i = 1; i <= num; i++) {
-            if (result * i < result) {
-                printf("Overflow occurred at %d!\n", i);
-                return;
-            }
+  char result = 1;
+  for (int i = 1; i <= num; i++) {
+    if (result * i < result) {
+      printf("Overflow occurred at %d!\n", i-1);
+      return;
+    }
             result *= i;
             printf("Factorial at %d: %d\n", i, result);
         }
