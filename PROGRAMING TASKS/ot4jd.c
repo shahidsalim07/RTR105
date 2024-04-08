@@ -42,6 +42,20 @@ int factorial_int(int num) {
     return result;
 }
 
+char factorial_char(int num) {
+    char result = 1;
+    char prevResult = 1;
+    for (int i = 1; i <= num; ++i) {
+        result *= i;
+        if (result < prevResult) {
+            printf("Overflow! Factorial of %d is out of range for char data type.\n", num);
+            break;
+        }
+        prevResult = result;
+    }
+    return result;
+}
+
 int main() {
     int num;
     char choice;
@@ -55,7 +69,7 @@ int main() {
 
     switch (choice) {
         case '1':
-            printf("Factorial of %d = %d\n", num, factorial_int(num));
+            printf("Factorial of %d = %d\n", num, factorial_char(num));
             break;
         case '2':
             printf("Factorial of %d = %d\n", num, factorial_int(num));
