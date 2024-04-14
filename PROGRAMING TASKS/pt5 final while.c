@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+void calculateFactorial(int num, char choice) {
+    switch (choice) {
+        case '1': {
+            int i = 1;
+            int factorial = 1;
+            int prev_factorial;
+            while (i <= num) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if (factorial / i != prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
+                i++;
+            }
+            printf("Factorial of %d = %d\n", num, factorial);
+            break;
+        }
+        case '2': {
+            int i = 1;
+            char factorial = 1;
+            char prev_factorial;
+            while (i <= num) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if ((char)(factorial / i) != (char)prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
+                i++;
+            }
+            printf("Factorial of %d = %d\n", num, factorial);
+            break;
+        }
+        case '3': {
+            int i = 1;
+            long long factorial = 1;
+            long long prev_factorial;
+            while (i <= num) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if (factorial / i != prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
+                i++;
+            }
+            printf("Factorial of %d = %lld\n", num, factorial);
+            break;
+        }
+        default:
+            printf("Invalid choice.\n");
+            break;
+    }
+}
+
+int main() {
+    int num;
+    char choice;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    printf("Choose data type:\n");
+    printf("1. int\n");
+    printf("2. char\n");
+    printf("3. long long\n");
+    printf("Enter your choice (1, 2, or 3): ");
+    scanf(" %c", &choice);
+
+    calculateFactorial(num, choice);
+
+    return 0;
+}
