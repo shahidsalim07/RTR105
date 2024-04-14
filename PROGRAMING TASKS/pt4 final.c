@@ -1,53 +1,72 @@
 #include <stdio.h>
 
-void calculateFactorial(int num, char type) {
-    if (type == 'i') {
-        int result = 1;
-        for (int i = 1; i <= num; i++) {
-            if (result * i < result) {
-                printf("Overflow occurred at %d!\n", i);
-                return;
+void calculateFactorial(int num, char choice) {
+    switch (choice) {
+        case '1': {
+            int i;
+            int factorial = 1;
+            int prev_factorial;
+            for (i = 1; i <= num; i++) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if (factorial / i != prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
             }
-            result *= i;
-            printf("Factorial at %d: %d\n", i, result);
+            printf("Factorial of %d = %d\n", num, factorial);
+            break;
         }
-    } else if (type == 'c') {
-  char result = 1;
-  for (int i = 1; i <= num; i++) {
-    if (result * i < result) {
-      printf("Overflow occurred at %d!\n", i-1);
-      return;
-    }
-            result *= i;
-            printf("Factorial at %d: %d\n", i, result);
-            
-        }
-    } else if (type == 'l') {
-        long long result = 1;
-        for (int i = 1; i <= num; i++) {
-            if (result * i < result) {
-                printf("Overflow occurred at %d!\n", i);
-                return;
+        case '2': {
+            int i;
+            char factorial = 1;
+            char prev_factorial;
+            for (i = 1; i <= num; i++) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if ((char)(factorial / i) != (char)prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
             }
-            result *= i;
-            printf("Factorial at %d: %lld\n", i, result);
+            printf("Factorial of %d = %d\n", num, factorial);
+            break;
         }
-    } else {
-        printf("Invalid data type!\n");
+        case '3': {
+            int i;
+            long long factorial = 1;
+            long long prev_factorial;
+            for (i = 1; i <= num; i++) {
+                prev_factorial = factorial;
+                factorial *= i;
+                if (factorial / i != prev_factorial) {
+                    printf("Overflow occurred!\n");
+                    return;
+                }
+            }
+            printf("Factorial of %d = %lld\n", num, factorial);
+            break;
+        }
+        default:
+            printf("Invalid choice.\n");
+            break;
     }
 }
 
 int main() {
-    int number;
-    char datatype;
-
+    int num;
+    char choice;
     printf("Enter a number: ");
-    scanf("%d", &number);
+    scanf("%d", &num);
+    
+    printf("Choose data type:\n");
+    printf("1. int\n");
+    printf("2. char\n");
+    printf("3. long long\n");
+    printf("Enter your choice (1, 2, or 3): ");
+    scanf(" %c", &choice);
 
-    printf("Enter data type ('i' for int, 'c' for char, 'l' for long long): ");
-    scanf(" %c", &datatype);
-
-    calculateFactorial(number, datatype);
+    calculateFactorial(num, choice);
 
     return 0;
 }
