@@ -13,8 +13,8 @@ void calculateFactorial(int num, char choice) {
                     printf("Overflow occurred!\n");
                     return;
                 }
+                printf("Factorial of %d = %d\n", i, factorial);
             }
-            printf("Factorial of %d = %d\n", num, factorial);
             break;
         }
         case '2': {
@@ -28,8 +28,8 @@ void calculateFactorial(int num, char choice) {
                     printf("Overflow occurred!\n");
                     return;
                 }
+                printf("Factorial of %d = %d\n", i, factorial);
             }
-            printf("Factorial of %d = %d\n", num, factorial);
             break;
         }
         case '3': {
@@ -43,8 +43,8 @@ void calculateFactorial(int num, char choice) {
                     printf("Overflow occurred!\n");
                     return;
                 }
+                printf("Factorial of %d = %lld\n", i, factorial);
             }
-            printf("Factorial of %d = %lld\n", num, factorial);
             break;
         }
         default:
